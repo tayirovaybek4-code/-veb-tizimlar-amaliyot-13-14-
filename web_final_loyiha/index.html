@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektron dekanat · Talabalar davomati va reytingi</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/ombor.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell">
+      <p class="eyebrow">Veb tizimlar / 13-amaliy mashg‘ulot</p>
+      <h1>Elektron dekanat</h1>
+      <p class="intro">Talabalar davomati va reytingi</p>
+    </div>
+  </header>
+  <main class="shell content">
+    <section class="stats" aria-label="Umumiy statistika">
+      <div class="stat"><span>Jami talabalar</span><strong id="jamiSoni">0</strong></div>
+      <div class="stat"><span>O‘rtacha ball</span><strong id="ortachaBaho">0</strong></div>
+      <div class="stat"><span>Qatnashganlar</span><strong id="qatnashganlar">0</strong></div>
+    </section>
+    <section class="panel" aria-labelledby="formaSarlavha">
+      <h2 id="formaSarlavha">Yangi talaba</h2>
+      <form id="talabaForma" novalidate>
+        <div class="fields">
+          <label>Talaba F.I.O. <input name="fio" id="talabaFio" placeholder="Familiya, ism, sharif" required maxlength="120"></label>
+          <label>Guruh <input name="guruh" id="talabaGuruh" placeholder="24-ATT-01" required maxlength="30"></label>
+          <label>Fan <input name="fan" id="talabaFan" value="Veb tizimlar" required maxlength="80"></label>
+          <label>Ball (0–100) <input name="baho" id="talabaBaho" type="number" inputmode="numeric" min="0" max="100" step="1" required placeholder="0–100"></label>
+          <label>Holat <select name="holat" id="talabaHolat"><option>Faol</option><option>Nofaol</option></select></label>
+          <label>Davomat <select name="davomat" id="talabaDavomat"><option>Qayd etilmagan</option><option>Qatnashdi</option><option>Qatnashmadi</option><option>Sababli</option></select></label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="saqlash">+ Saqlash</button>
+          <button type="button" class="secondary" id="bekor" hidden>Bekor qilish</button>
+        </div>
+      </form>
+      <p id="xabar" role="status"></p>
+    </section>
+    <section class="panel" aria-labelledby="royxatSarlavha">
+      <h2 id="royxatSarlavha">Talabalar ro‘yxati</h2>
+      <div class="tools">
+        <label>Qidiruv <input type="search" id="qidiruv" placeholder="F.I.O., guruh yoki fan"></label>
+        <label>Saralash <select id="saralash"><option value="yangi">Yangi yozuvlar</option><option value="yuqori">Ball kamayish tartibida</option><option value="past">Ball o‘sish tartibida</option><option value="fio">F.I.O. bo‘yicha</option></select></label>
+      </div>
+      <p class="hint" id="natija">0 ta yozuv</p>
+      <div class="table-wrap" role="region" aria-label="Talabalar jadvali" tabindex="0">
+        <table aria-labelledby="royxatSarlavha">
+          <thead><tr><th scope="col">№</th><th scope="col">F.I.O.</th><th scope="col">Guruh</th><th scope="col">Fan</th><th scope="col">Ball</th><th scope="col">Holat</th><th scope="col">Davomat</th><th scope="col">Amallar</th></tr></thead>
+          <tbody id="jadvalTana"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <dialog id="ochirishOynasi" aria-labelledby="ochirishSarlavha">
+    <form method="dialog">
+      <h2 id="ochirishSarlavha">Talabani o‘chirish</h2>
+      <p id="ochirishMatni"></p>
+      <div class="form-actions">
+        <button class="secondary" value="bekor" autofocus>Bekor qilish</button>
+        <button class="danger" value="tasdiq">O‘chirish</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

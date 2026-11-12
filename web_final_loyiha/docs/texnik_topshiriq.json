@@ -1,0 +1,36 @@
+{
+  "loyihaNomi": "Elektron dekanat: Talabalar davomati va reytingi",
+  "versiya": "1.0.0",
+  "maqsad": "Talabalar ro‘yxati, joriy davomat holati va fan bo‘yicha ballarni yuritish.",
+  "rollar": [
+    {
+      "nomi": "Operator",
+      "huquqlar": ["Qo‘shish", "Ko‘rish", "Qidirish", "Saralash", "Tahrirlash", "O‘chirish"]
+    }
+  ],
+  "arxitektura": {
+    "frontend": "HTML5, CSS3 va js/app.js",
+    "biznesMantiqi": "js/ombor.js orqali validatsiya va CRUD",
+    "dataStorage": "Brauzer localStorage, talabalar kaliti",
+    "uslub": "Bitta sahifali veb-ilova (SPA), uchta mantiqiy qatlam",
+    "restApi": "Serverli kengaytma uchun hujjatlashtirilgan shartnoma"
+  },
+  "modullar": [
+    "Talabani qo‘shish va validatsiya",
+    "Ro‘yxatni ko‘rish, qidirish va saralash",
+    "Talaba ma’lumotlarini tahrirlash",
+    "Tasdiqdan so‘ng talabani o‘chirish",
+    "Jami son, o‘rtacha ball va qatnashganlar statistikasini hisoblash"
+  ],
+  "nofunksionalTalablar": [
+    "O‘zbek tilidagi moslashuvchan interfeys va klaviatura bilan boshqarish",
+    "HTML, CSS va JavaScript fayllarini kutubxonasiz ishga tushirish",
+    "Ma’lumotlarni sahifa yangilanishidan keyin ham saqlash",
+    "Noto‘g‘ri ballni rad etish va foydalanuvchi matnini jadvalga oddiy matn sifatida chiqarish"
+  ],
+  "chegaralar": [
+    "Bitta yozuvda bitta fan va bitta joriy davomat holati saqlanadi.",
+    "Saqlash joriy brauzer profili va sayt manziliga bog‘liq.",
+    "O‘quv demosida autentifikatsiya va tarmoq sinxronizatsiyasi qo‘llanilmaydi."
+  ]
+}

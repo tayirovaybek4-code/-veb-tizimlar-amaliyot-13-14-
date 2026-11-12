@@ -1,0 +1,46 @@
+VEB TIZIMLAR · 13 VA 14-AMALIY MASHG‘ULOTLAR
+
+13-amaliyot — Elektron dekanat
+1. ZIP faylni to‘liq oching.
+2. VS Code dasturida File → Open Folder → web_final_loyiha ni tanlang.
+3. Terminal → New Terminal tugmalarini bosing.
+4. Windows’da Python mavjud bo‘lsa, terminalga yozing:
+   py -m http.server 8000
+   Agar py ishlamasa, python -m http.server 8000 buyrug‘ini sinang.
+5. Brauzerda http://localhost:8000/ manzilini oching.
+   VS Code’da Live Server o‘rnatilgan bo‘lsa, index.html ustida o‘ng tugma
+   → Open with Live Server orqali ham ochish mumkin.
+6. Uchta sinov yozuvini 88, 76 va 96 ball bilan kiriting. Jami 3, o‘rtacha
+   86.7 ball chiqadi. F5 bosing. 76 ballni 82 ga o‘zgartiring, keyin shu
+   yozuvni o‘chiring. Jami 2, o‘rtacha 92.0 ball bo‘ladi.
+7. O‘qituvchiga docs papkasidagi texnik topshiriq, sxema va API
+   spetsifikatsiyasini ko‘rsating. Ma’lumotlar shu brauzerda saqlanadi.
+
+14-amaliyot — Bulutli hisoblash va veb-xizmatlar
+1. Jonli sahifani brauzerda oching:
+   https://veb-tizimlar-amaliyot-14.choicefoal16.chatgpt.site/
+2. HTTPS va HTTP protokoli qatorlarini ko‘ring.
+3. “Vaqtni yangilash” tugmasini bosing. Qurilma vaqti chiqadi.
+4. Shu havolani telefonda ham oching.
+5. Chrome: F12 → Network → sahifani yangilang. Jadval sarlavhasini o‘ng
+   tugma bilan bosib Protocol ustunini yoqing. style.css ni tanlab,
+   Headers → Response Headers bo‘limida CDN kesh sarlavhasini ko‘ring.
+6. Mahalliy nusxa uchun web_amaliyot_14/index.html ni brauzerda oching.
+7. Muayyan platforma talab qilinsa, shu papkani o‘sha hostingga yuklang.
+   Vercel va Netlify konfiguratsiyalari loyiha papkasida bor.
+
+GitHub Pages orqali joylashtirish
+1. GitHub’da yangi repozitoriya oching. Masalan, web-amaliyot-14.
+2. web_amaliyot_14 ichidagi fayllarni repozitoriyaning asosiy papkasiga
+   yuklang. index.html repozitoriya ildizida tursin.
+3. Settings → Pages → Build and deployment → Source bo‘limida
+   Deploy from a branch ni tanlang.
+4. Branch bo‘limida main va /(root) ni tanlab, Save ni bosing.
+5. Joylashtirish tugaganda Pages bo‘limidagi Visit site havolasini oching.
+   GitHub Pages uchun HTTPS ulanishini shu sahifada tekshiring.
+   vercel.json sozlamalari Vercel’da, netlify.toml esa Netlify’da qo‘llanadi.
+
+Netlify Drop orqali joylashtirish
+1. https://app.netlify.com/drop manzilini oching va hisobingizga kiring.
+2. ZIP ichidan chiqarilgan web_amaliyot_14 papkasini yuklash maydoniga
+   tashlang. Tayyor bo‘lgan .netlify.app havolasini brauzerda tekshiring.

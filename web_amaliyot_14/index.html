@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bulutli hosting, HTTPS va tarmoq tezligini tekshirish uchun 14-amaliy mashg‘ulot.">
+  <title>Bulutli hisoblash va veb-xizmatlar</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <header>
+      <p class="eyebrow">Veb tizimlar / 14-amaliy mashg‘ulot</p>
+      <h1>Bulutli hisoblash va veb-xizmatlar</h1>
+      <p class="subtitle">24-ATT-01 guruhining amaliy loyihasi</p>
+    </header>
+    <section class="card" aria-labelledby="audit-title">
+      <div class="card-heading">
+        <h2 id="audit-title">Ulanish holati</h2>
+        <span class="badge" id="holat">Aniqlanmoqda</span>
+      </div>
+      <dl>
+        <div><dt>Manzil</dt><dd id="manzil">—</dd></div>
+        <div><dt>HTTPS / TLS</dt><dd id="himoya">—</dd></div>
+        <div><dt>HTTP protokoli</dt><dd id="protokol">—</dd></div>
+        <div><dt>HTML javob vaqti</dt><dd id="javob">—</dd></div>
+        <div><dt>Sahifa yuklanishi</dt><dd id="yuklanish">—</dd></div>
+      </dl>
+      <p class="note">Vaqtlar shu brauzerda joriy ochilish uchun o‘lchanadi.</p>
+    </section>
+    <section class="card clock" aria-labelledby="clock-title">
+      <div>
+        <h2 id="clock-title">Mahalliy vaqt</h2>
+        <p id="vaqtMatni" role="status">Qurilma vaqtini ko‘rish uchun tugmani bosing.</p>
+      </div>
+      <button id="vaqtTugmasi" type="button">Vaqtni yangilash</button>
+    </section>
+    <noscript>Ulanish ko‘rsatkichlari va vaqt tugmasi uchun JavaScript yoqilishi kerak.</noscript>
+  </main>
+</body>
+</html>

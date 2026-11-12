@@ -1,0 +1,22 @@
+ELEKTRON DEKANAT · REST API SHARTNOMASI
+
+Bu shartnoma tizimning kelajakdagi serverli versiyasi uchun loyihalangan.
+Amaliy SPA amallarni js/ombor.js va brauzer localStorage orqali bajaradi.
+
+GET    /api/talabalar       Barcha yozuvlar. 200 OK va JSON massiv.
+POST   /api/talabalar       Yangi yozuv. 201 Created va yaratilgan obyekt.
+PUT    /api/talabalar/:id   Yozuvning tahrirlanadigan maydonlarini almashtirish.
+                            200 OK va yangilangan obyekt.
+DELETE /api/talabalar/:id   Yozuvni o‘chirish. 204 No Content.
+
+POST va PUT uchun Content-Type: application/json.
+So‘rov tanasiga fio, guruh, fan, baho, holat va davomat kiritiladi.
+id musbat butun son. id va qaydVaqti POST vaqtida belgilanadi, PUT ularni saqlaydi.
+Baho 0–100 oralig‘ida butun son. Holat va davomat uchun sxemadagi qiymatlar olinadi.
+
+POST yoki PUT so‘roviga misol:
+{"fio":"Sinovchi Ali","guruh":"24-ATT-01","fan":"Veb tizimlar","baho":88,"holat":"Faol","davomat":"Qatnashdi"}
+
+400 Bad Request — noto‘g‘ri JSON, ID yoki maydon qiymati.
+404 Not Found — PUT yoki DELETE so‘rovida ID bo‘yicha yozuv topilmadi.
+Xato tanasiga misol: {"xabar":"Ball 0 dan 100 gacha butun son bo‘lishi kerak."}
